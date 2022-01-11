@@ -14,7 +14,7 @@ serviceAccount:
    name: payment
 
 service:
-  type: ClusterIp
+  type: ClusterIP
   port: 80
   containerPort: 8080
 
