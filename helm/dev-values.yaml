@@ -1,0 +1,26 @@
+appName: payment
+replicaCount: 1
+image:
+  repository: 608320470413.dkr.ecr.us-east-1.amazonaws.com/payment
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+   create: true
+   annotations: {}
+   name: payment
+
+service:
+  type: ClusterIp
+  port: 80
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi       
